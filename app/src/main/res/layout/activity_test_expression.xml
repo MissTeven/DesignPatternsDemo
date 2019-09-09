@@ -4,30 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".expression.TestExpressionActivity">
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
-        <Button
+
+        <EditText
+            android:id="@+id/et_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="testExpression"
-            android:text="test expression"
+            android:gravity="center"
+            android:hint="Input what you want to calculate"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <Button
+
+        <TextView
+            android:id="@+id/tv_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="testProxy"
-            android:text="test proxy"
+            android:gravity="center"
+            android:hint="Calculation result here"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:onClick="calculate"
+            android:text="calculate"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.v7.widget.LinearLayoutCompat>
+
 </FrameLayout>
